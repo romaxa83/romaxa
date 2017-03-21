@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+#main {
+    width: 100%;
+    
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*=== Style of top navigation ===*/
+#top-nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(42, 136, 6);
+}
+#top-nav ul {
+    display: inline-block;
+}
+#top-nav li {
+    display: inline-block;
+    float: left;
+    font-size: 25px;
+    margin-top: 2px;
+    margin-left: 25px;
+    font-family: 'Baloo Bhaina',Verdana,sans-serif;
+    list-style: none;
+}
+#top-nav a {
+    text-decoration: none;
+    color: #9be08e;
+}
+#top-nav a:hover {
+    color: antiquewhite;
+    text-shadow: 2px 2px 4px #2daf15;
+}
+/*=== Style of header ===*/
+header {
+    widows: 100%;
+    height: 111px;
+    background-color: rgb(8, 93, 14);
+}
+header h1 {
+    display: inline-block;
+    float: left;
+    color: antiquewhite;
+    font-family: 'Baloo Bhaina',Verdana,sans-serif;
+    font-style: italic;
+    font-size: 48px;
+    margin-left: 157px;
+}
+header span {
+    font-family: Verdana;
+    display: inline-block;
+    font-size: 34px;
+    margin-left: 20px;
+    word-spacing: 17px;
+}
+.small-head {
+    float:left;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.small-head :first-child {
+    color: #eefff1;
+    font-family: Helvetica;
+}
+.small-head :last-child {
+    color: rgb(39, 144, 46);
+    font-family: Helvetica;
+    padding-top: 6px;
+}
+
+/*=== Style div with photo ===*/
+#section-photo {
+    background-color: darkgreen;
+    position: relative;
+}
+#photo {
+    width: 77%;
+    height: 600px;
+}
+#photo div {
+    float: left;
+    position: relative;
+    background: #999;
+    width: 25%;
+    height: 282px;
+}
+/*=== Псевдоэлемент с градиентом ===*/
+#photo div::after {
+    content: '';
+    width:100%;
+    height: 282px;
+    display: block;
+    position:absolute;
+    top: 0;
+    left: 0;
+    background: -webkit-radial-gradient(transparent,rgba(0,0,0,.7));
+    transition: all .4s;
+}
+#photo div:hover::after {
+    opacity: 0;
+}
+#photo img {
+    float: left;
+    width: 100%;
+    height: 282px;
+}
+/*=== Стиль для скрытой информации людях на фото ===*/
+.about-man {
+    display: none;
+    width: 38%;
+    height: 100%;
+    position: absolute;
+    padding-left: 10px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    color: #d8de8a;
+    text-indent: 30px;
+    overflow: hidden;
+}
+.about-man h3 {
+    text-align: center;
+    font-size: 30px;
+}
+.about-man p {
+    text-overflow: hidden;
+}    
+.left {
+    top: 0%;
+    left: 0%;
+}   
+.right{
+
+    top: 0%;
+    left: 39%;
+}
+
+
+   
+/*=== Style aside ===*/
+aside {
+    float: right;
+    width: 20%;
+    height: 800px;
+    position: relative;
+    top: -736px;
+    right: 15px;
+    background-color: rgba(86, 253, 46, 0.76);
+    border-radius: 5px;
+    box-shadow: 8px 7px 5px rgb(24, 87, 0);
+}
+.header-aside-nav {
+    position: relative;
+    top: 154px;
+    left: 22px;
+}
+.header-aside-nav p {
+    font-size: 30px;
+    color: #055D06;
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.header-aside-nav p:hover {
+    text-shadow: 1px 2px 1px green;
+    cursor: pointer;
+}
+
+aside #aside-nav {
+    margin-top: 161px;
+}
+aside ul {
+    list-style: none;
+}
+aside li {
+    text-align: center;
+    padding-top: 10px;
+    border-bottom:1px dashed antiquewhite;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 23px;
+    color: #ffe9cb;
+    cursor: pointer;
+}
+
+aside li:hover {
+    border-bottom: 2px solid green;
+    border-top: 2px solid green;
+    font-size: 22px;
+}
+/*=== Hide style which show on click ===*/
+.opacity {
+   opacity: 0.1;
+}
+/*=== Style of content ===*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    height: 100%;
+}
+#text-content {
+   
+    background: linear-gradient(45deg,green,rgb(4, 67, 8));
+    width: 100%;
+    height: 550px;
+    
+}
+#text-content .column {
+     
+/*    overflow: hidden;*/
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    
+    color: #d8de8a;
+    width: 25%;
+    float: left
+}
+#text-content h3 {
+    text-align: center;
+    font-family: 'Baloo Bhaina',Verdana,sans-serif;
+    font-size: 24px;
+    color:#cdfed8;
+}
+#text-content p {
+    margin-left:10px;
+    text-indent:20px    
+}
+#text-content span {
+    color: #1765f8;
+}
+#text-content span:hover {
+    color: #150a98;
+    cursor: pointer;
+}
+    
+.foot {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top,green,rgb(4, 67, 8));
+}    
+    
+    
+
+ 
+/*
+@media screen and (min-width:800px) and (max-width:1160px){
+    #photo div {
+        width: 190px;
+        height: 213px;
+    }
+    #photo img {
+        width: 190px;
+        height: 213px;
+    }
+} 
