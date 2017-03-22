@@ -1,16 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
-
-
 #main {
     width: 100%;
     
     max-width: 1200px;
     margin: 0 auto;
 }
+    
+
+
 /*=== Style of top navigation ===*/
 #top-nav {
     width: 100%;
@@ -90,7 +90,7 @@ header span {
     width: 25%;
     height: 282px;
 }
-/*=== Псевдоэлемент с градиентом ===*/
+/*=== Псевдоэлемент с градиентом на фото ===*/
 #photo div::after {
     content: '';
     width:100%;
@@ -138,6 +138,10 @@ header span {
 
     top: 0%;
     left: 39%;
+}
+/*=== Hide style which show on click ===*/
+.opacity {
+   opacity: 0.1;
 }
 
 
@@ -192,10 +196,6 @@ aside li:hover {
     border-top: 2px solid green;
     font-size: 22px;
 }
-/*=== Hide style which show on click ===*/
-.opacity {
-   opacity: 0.1;
-}
 /*=== Style of content ===*/
 .clearfix:after {
     content: "";
@@ -204,18 +204,13 @@ aside li:hover {
     height: 100%;
 }
 #text-content {
-   
-    background: linear-gradient(45deg,green,rgb(4, 67, 8));
+    background-image: linear-gradient(45deg,green,rgb(4, 67, 8));
     width: 100%;
     height: 550px;
-    
 }
 #text-content .column {
-     
-/*    overflow: hidden;*/
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
-    
     color: #d8de8a;
     width: 25%;
     float: left
@@ -237,12 +232,17 @@ aside li:hover {
     color: #150a98;
     cursor: pointer;
 }
-    
 .foot {
     width: 100%;
     height: 200px;
     background: linear-gradient(to top,green,rgb(4, 67, 8));
 }    
+    
+   
+    
+     
+
+    
     
     
 
