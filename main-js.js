@@ -68,3 +68,20 @@ jQuery(document).ready(function(){
 	// 	jQuery('#photo div').eq(1).removeClass('opacity');
 	// });	
 			
+jQuery(document).ready(function(){
+	var navMenu = jQuery("nav");
+	// Устанавливаем икнонку там где есть выпадащий список
+	navMenu.find("li").each(function(){
+		if(jQuery(this).find("ul").length > 0) {
+			jQuery("<span>").text("^").appendTo(jQuery(this).children(":first"));
+	//Показываем выпадающий список
+		jQuery(this).mouseenter(function(){
+			jQuery(this).find("ul").stop(true,true).slideDown();
+		});
+	//Убираем выпадающий список
+		jQuery(this).mouseleave(function(){
+			jQuery(this).find("ul").stop(true,true).slideUp();
+		});
+		}
+	});
+});
