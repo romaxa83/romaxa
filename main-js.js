@@ -47,27 +47,17 @@ jQuery(document).ready(function(){
 		};
 	});
 });
+//=== конец скрипта для фото ================================
 // Функция добавляет перекат градиента
-jQuery(document).ready(function(){
-	var deg = 0;
-	var timer = setInterval(function(){
-		deg++;
-		jQuery('#text-content').css('background-image','linear-gradient('+ deg +'deg,green,rgb(4, 67, 8)')
-	},60000/360);
-});
-		
-			
-			// var arr = new Array();
-			// jQuery('#mans div').each(function () {
-			// 	arr = jQuery(this).attr('style');
-			// 	console.log(arr);
-			// })	
-
-	// зброс класса 'opacity' на всех элементах
-	// jQuery('header-aside-nav p').on('click',function(){
-	// 	jQuery('#photo div').eq(1).removeClass('opacity');
-	// });	
-			
+// jQuery(document).ready(function(){
+// 	var deg = 0;
+// 	var timer = setInterval(function(){
+// 		deg++;
+// 		jQuery('#text-content').css('background-image','linear-gradient('+ deg +'deg,green,rgb(4, 67, 8)')
+// 	},60000/360);
+// });
+//=== конец скрипат переката градиента ======================
+// Скрипт для dropdown		
 jQuery(document).ready(function(){
 	var navMenu = jQuery("nav");
 	// Устанавливаем икнонку там где есть выпадащий список
@@ -85,3 +75,30 @@ jQuery(document).ready(function(){
 		}
 	});
 });
+//=== конец скрипта для dropdown ============================
+//Скрипт для появления скрытого текстового поля 
+jQuery(document).ready(function () {
+	jQuery('nav img').click(showSearch);
+	jQuery('nav ').mouseleave(hideSearch);
+	function showSearch(){
+		jQuery('nav input').animate({width:'200px'},2000);
+	}
+	function hideSearch(){
+		jQuery('nav input').animate({width:'0px'},500);
+	}
+});
+//=== конец скрипта для появлени текс. поля			
+//Скрипт для кнопки вверх
+jQuery(document).ready(function () {
+	jQuery(window).scroll(function () {
+		if(jQuery(this).scrollTop()>100){
+			jQuery('.scroll-up').fadeIn();
+		} else {
+			jQuery('.scroll-up').fadeOut();
+		}
+	});
+jQuery('.scroll-up').click(function () {
+	jQuery('html,body').animate({scrollTop:0},
+		2600);
+});	
+}); 

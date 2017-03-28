@@ -5,10 +5,10 @@
 }
 #main {
     width: 100%;
-    
     max-width: 1200px;
     margin: 0 auto;
 }
+    
     
 
 
@@ -64,6 +64,35 @@ ul a span {
     font-family: sans-serif;
     transform: rotate(-180deg);
 }
+/*=== Текстовое поле для поиска ===*/
+nav input {
+    float: right;
+    position: relative;
+    top: -37px;
+    right: 22%;
+    width: 0px;
+    height: 25px;
+    border: 1px solid green;
+    border-radius: 5px;
+    /*box-shadow: 2px 2px 2px 2px darkgreen;*/
+    font-size: 20px;
+    outline: none;
+}
+nav img {
+    width: 35px;
+    height: 35px;
+    background-color: rgb(42, 136, 6);
+    position: relative;
+    top: -41px;
+    right: -58%;
+}
+nav img:hover {
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+}
+
+    
 /*=== Выпадающий список ===*/
 .dropdown {
     display: none;
@@ -74,12 +103,10 @@ ul a span {
     background: rgba(10,196,70,.5);
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    width: 100%;
 }
 .dropdown li {
     float: none;
-    /*margin-left: 5px;
-    margin-right: 10px;*/
-    width: 126px;
     padding-top: -5px;
     text-align: center;
 }
@@ -94,6 +121,7 @@ ul a span {
 .dropdown li a {
     color: rgb(33,3,190);
 }
+    
     
 
 /*=== Style of dropdown in a navigation ===*/
@@ -139,6 +167,7 @@ header span {
 #section-photo {
     background-color: darkgreen;
     position: relative;
+    height: 100%;
 }
 #photo {
     width: 77%;
@@ -172,6 +201,9 @@ header span {
     height: 282px;
 }
 /*=== Стиль для скрытой информации людях на фото ===*/
+#mans {
+    
+}
 .about-man {
     display: none;
     width: 38%;
@@ -181,6 +213,7 @@ header span {
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
     color: #d8de8a;
+
     text-indent: 30px;
     overflow: hidden;
 }
@@ -189,7 +222,7 @@ header span {
     font-size: 30px;
 }
 .about-man p {
-    text-overflow: hidden;
+    text-overflow: ellipsis;
 }    
 .left {
     top: 0%;
@@ -253,28 +286,30 @@ aside li {
 }
 
 aside li:hover {
-    border-bottom: 2px solid green;
-    border-top: 2px solid green;
-    font-size: 22px;
+    background-color: darkgreen;
+    font-size: 28px;
+    border-bottom: none;
+    
 }
 /*=== Style of content ===*/
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
-    height: 100%;
+    height: 0;
+    visibility: hidden;
 }
 #text-content {
     background-image: linear-gradient(45deg,green,rgb(4, 67, 8));
     width: 100%;
-    height: 550px;
+    // height: 100%;
 }
 #text-content .column {
     font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
     color: #d8de8a;
-    width: 25%;
-    float: left
+    width: 26%;
+    float: left;
 }
 #text-content h3 {
     text-align: center;
@@ -293,13 +328,172 @@ aside li:hover {
     color: #150a98;
     cursor: pointer;
 }
-.foot {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(to top,green,rgb(4, 67, 8));
+.column img {
+    width: 45%;
+    margin: 10px;
+    border: 1px solid #cdfed8;
+    border-radius: 5px;
+
+}
+
+.column p > a {
+    font-size: 20px;
+    color: #1765f8;
+    text-decoration-line: none;
+    margin-left: 41%;
+}
+.column p > a:hover {
+    color: #150a98;
+    font-style: italic; 
 }    
+.column p > a:hover::after {
+    content: " ...";
+    color: #150a98;
+    font-style: italic;
+}
+/*=== Кнопка вверх ===*/ 
+.scroll-up {
+    display: none;
+    width: 55px;
+    height: 55px;
+    opacity: .8;
+    position: fixed;
+    bottom: 50px;
+    right: 75px;
+    text-indent: -9999px;
+    background: url('img/up.png') no-repeat;
+    background-position: 50% 50%; 
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px black;
+}
     
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #FCEE21;
+    background: linear-gradient(35deg,#009E00,#009245);
    
+}    
+/*=== Кнопни социальных сетей ===*/ 
+.networks {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+.networks li {
+    background-image: url('img/sprite-network.png');
+    background-color: darkgreen;
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    display: inline-block;
+    border-radius: 50%;
+    transition: all ease-in-out 1s;
+    cursor: pointer;  
+}
+.facebook {
+    background-position: 0px 0px;
+}
+.facebook:hover {
+    background-position: 0px 0px;
+    background-color: #3b5998;
+    box-shadow: 2px 2px 2px black;
+
+}  
+.github {
+    background-position: -50px 0px;
+}
+.github:hover {
+    background-position: -50px 0px;
+    background-color: #24292e;
+    box-shadow: 2px 2px 2px black;
+}
+
+.google {
+    background-position: -100px 0px;
+}
+.google:hover {
+    background-position: -100px 0px;
+    background-color: #ea4335;
+    box-shadow: 2px 2px 2px black;
+}
+.instagram {
+    background-position: -150px 0px;
+}
+.instagram:hover {
+    background-position: -150px 0px;
+    background-color: #3897f0;
+    box-shadow: 2px 2px 2px black;
+}  
+.linkedin {
+    background-position: -200px 0px;
+}
+.linkedin:hover {
+    background-position: -200px 0px;
+    background-color: #0077b5;
+    box-shadow: 2px 2px 2px black;
+}
+.odnocklas {
+    background-position: -250px 0px;
+}
+.odnocklas:hover {
+    background-position: -250px 0px;
+    background-color: #f58220;
+    box-shadow: 2px 2px 2px black;
+}
+.pinterest {
+    background-position: -300px 0px;
+}
+.pinterest:hover {
+    background-position: -300px 0px;
+    background-color: #bd081c;
+    box-shadow: 2px 2px 2px black;
+}
+.youtube {
+    background-position: -350px 0px;
+}
+.youtube:hover {
+    background-position: -350px 0px;
+    background-color: #e62117;
+    box-shadow: 2px 2px 2px black;
+}        
+/*=== Навигация футера ===*/
+.foot-nav {
+    margin-left: 9%;
+}
+.foot-nav ul {
+    list-style: none;
+    color: red;
+}
+.foot-nav ul li {
+    padding: 2px 0;
+}
+.foot-nav ul li a {
+    text-decoration: none;
+    color: #24292e;
+    transition: all ease-in-out 1s;
+    cursor: pointer;
+}
+.foot-nav ul li a:hover {
+    color: orange;
+    border-bottom: 1px dashed orange;
+}
+
+.copy {
+    // width: 100%;
+    margin-bottom: 10px;
+}
+.copy p {
+    font-family: Helvetica,sans-serif;
+    text-align: center;
+}
+
     
      
 
