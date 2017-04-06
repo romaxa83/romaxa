@@ -6,6 +6,7 @@ jQuery(document).ready(function(){
 	// задаем класс 'opacity' всем элементам кроме выбраного 
 		jQuery('#photo div').addClass('opacity');
 		jQuery('#photo div').eq(n).removeClass('opacity');
+	
 	// создаем конст. для добавления биографии
 	// переменная dis получает индекс эл. с атр. style
 		var dis = jQuery('#mans div[style]').index();
@@ -81,7 +82,7 @@ jQuery(document).ready(function () {
 	jQuery('nav img').click(showSearch);
 	jQuery('nav ').mouseleave(hideSearch);
 	function showSearch(){
-		jQuery('nav input').animate({width:'200px'},2000);
+		jQuery('nav input').animate({width:'17%'},2000);
 	}
 	function hideSearch(){
 		jQuery('nav input').animate({width:'0px'},500);

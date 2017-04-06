@@ -35,7 +35,26 @@ nav li {
 }
 nav li:hover {
     background: green;
+    border-bottom: 1px solid white;
 }
+// Разноцветное подчеркивание
+
+nav li:first:hover {
+    border-bottom: 1px solid white;
+}
+nav li:nth-child(2):hover {
+    border-bottom: 1px solid orange;
+}
+nav li:nth-child(3):hover {
+    border-bottom: 1px solid blue;
+}
+nav li:nth-child(4):hover {
+    border-bottom: 1px solid red;
+}
+nav li:nth-child(5):hover {
+    border-bottom: 1px solid pink;
+}
+
 nav ul:after {
     content: ".";
     display: block;
@@ -74,7 +93,8 @@ nav input {
     height: 25px;
     border: 1px solid green;
     border-radius: 5px;
-    /*box-shadow: 2px 2px 2px 2px darkgreen;*/
+    background-color: rgb(163,250,177);
+    color: #24292e;
     font-size: 20px;
     outline: none;
 }
@@ -105,22 +125,38 @@ nav img:hover {
     border-bottom-left-radius: 5px;
     width: 100%;
 }
+
 .dropdown li {
     float: none;
     padding-top: -5px;
     text-align: center;
 }
+
 .dropdown li:hover {
-    background: rgba(25,235,226,.5);
+    background: rgba(240,48,48,.8);
+    border-bottom: none;
 }
-.dropdown li:hover.last {
+.dropdown li:nth-child(2):hover {
+    border-bottom: none;
+}
+.dropdown li:nth-child(3):hover {
+    border-bottom: none;
+}
+.dropdown li:nth-child(4):hover {
+    border-bottom: none;
+}
+.dropdown li:nth-child(5):hover {
+    border-bottom: none;
+}
+.dropdown li:last-child:hover {
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    background: red;
 }
+    
 .dropdown li a {
-    color: rgb(33,3,190);
+    color: #24292e;
 }
+
     
     
 
@@ -365,20 +401,21 @@ aside li:hover {
     background-position: 50% 50%; 
     border-radius: 50%;
     box-shadow: 2px 2px 2px black;
+    z-index: 9999;
 }
     
 
 
 
 
-
+/*=== Cтили футера ===*/ 
 
 footer {
     width: 100%;
     height: 100%;
     border-top: 1px solid #FCEE21;
     background: linear-gradient(35deg,#009E00,#009245);
-   
+    position: relative;
 }    
 /*=== Кнопни социальных сетей ===*/ 
 .networks {
@@ -466,6 +503,7 @@ footer {
 /*=== Навигация футера ===*/
 .foot-nav {
     margin-left: 9%;
+
 }
 .foot-nav ul {
     list-style: none;
@@ -484,15 +522,103 @@ footer {
     color: orange;
     border-bottom: 1px dashed orange;
 }
-
+/*=== Логотипы ===*/
+.foot-logo {
+    position: relative;
+    top: -130px;
+    float: right;
+    width: 50%;
+    height: 50px;
+}
+.foot-logo-header {
+    position: absolute;
+    top: -64%;
+    right: 34%;
+    color: #24292e;
+    font-family: Verdana,sans-serif;
+} 
+.foot-logo div {
+    float: right;
+    opacity: .5;
+    transition: all ease-in-out .5s;
+}
+.logo-html {
+    position: absolute;
+    top: 37%;
+    right: 50%;
+}
+.logo-html:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.logo-css {
+    position: absolute;
+    top: 24%;
+    right: 34%;
+}
+.logo-css:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.logo-jQuery {
+    position: absolute;
+    top: 60%;
+    right: 22%;
+}
+.logo-jQuery:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.foot-logo-text {
+    position: absolute;
+    top: 64%;
+    right: 0%;
+    font-size: 10px;
+    font-family: Verdana,sans-serif;
+    color: #24292e;
+    width: 50%;
+    height: 15%;
+    // margin-bottom: 30px;
+}
+/*=== Знак копирайта ===*/ 
+hr {
+    color: yellow;
+    border: none;
+    background-color: yellow;
+    height: 1px;
+    width: 80%;
+    text-align: center;
+    margin: 5px auto;
+}    
 .copy {
-    // width: 100%;
+    position: relative;
+    bottom: 0%;
+    width: 100%;
     margin-bottom: 10px;
 }
 .copy p {
     font-family: Helvetica,sans-serif;
     text-align: center;
+    padding-left: 10%;
 }
+    
+    
+    
+@media screen and (min-width:400px) and (max-width:940px){
+    .copy p {
+        padding-left: 0;
+        font-size: 14px;
+    }    
+}
+
+
+
+
+
+
+
+
+
 
     
      
